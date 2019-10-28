@@ -1,0 +1,57 @@
+Functions to change:
+
+utils.sort_to_snake():
+	
+	Add an if statement for the new plate type, and define how you want the wells to be sorted.
+	If snake sorting is fine, code can be copied from the other blocks and have the values changed 
+	for the proper number of rows and columns.
+	
+
+imager_controls.autocorrect():
+	
+	This function is currently designed for circular wells, and should work with any variation.
+	However, different shaped wells will require an additional if statement checking the plate type,
+	and the appropraite CV logic to enact autocorrect on this shape.
+	
+	
+application.open_custom_window():
+
+	This whole window must be redefined to match the new plate format. The same code can be used,
+	but copied into an if block with changed row and column values.
+	
+	
+application.determine_wells():
+
+	This function reads user inputs on the toggle boxes to determine which wells to include in a run.
+	New boxes will need to be added and evaluated to match the plate's format.
+	
+	
+application.determine_custom_wells():
+
+	Currently loops through a hardcoded 288 iterations. This value should be changed, along with the
+	length of the variable list, to account for the total number of wells on a new plate.
+	
+	
+application.determine_coordinates():
+
+	Determines the locations of all wells by using the location of the first well. Must add an if 
+	statement for the new plate type, and add in math for determining distance between wells. This 
+	information can usually be found on the data sheets provided by the manufacturer.\
+	
+	
+application.paint_custom_diagram():
+
+	Similar to open_custom_window(), this section must be redefined for the target plate format.
+	well_to_coordinates() and well_to_little_coordinates() should also be updated accordingly.
+	
+	
+application.go()
+
+	Add an if statement to check the plate name and set the file extension accordingly.
+
+
+imager_controls.run_auto_imager(), and all related auto_imaging functions (4 in total):
+
+	Add an if statement for the new plate type, and copy the running information
+	from the previous sections. Make any appropriate changes within this block, 
+	such as using a	different variation of XY autocorrect or different starting locations.
